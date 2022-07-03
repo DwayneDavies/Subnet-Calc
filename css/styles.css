@@ -1,1 +1,257 @@
-body, option, select#cidrSelect {background-color: #eee;font-family: "Helvetica,Arial,sans-serif";font-size: 16pt;}#submit {background-color: #003366;color: white;font-size: 24px;font-weight: bold;height: 50px;letter-spacing: 1px;border: none;border-radius: 10px;}#cidrSelect, #ipAddressInput {margin-bottom: 10px;margin-top: 10px;padding-bottom: 5px;padding-left: 10px;padding-top: 5px;border-radius: 10px;}#ipAddressInput {border: 2px solid #003366;width: 200px;}#cidrSelect {width: 275px;}.table-row {display: table-row;}.table-cell {display: table-cell;}.bold-cell {font-weight: bold;}.container {background: white;height: 100%;min-height: 100%;}.container {padding-left: 0px;padding-right: 0px;}main, header, footer {padding-left: 20px;padding-right: 20px;}footer {border-top: 1px solid black;}header {padding-bottom: 20px;padding-top: 20px;}h1 {color: #003366;float: left;font-size: 2.5em;font-weight: bold;}#aboutSpan {color: #003366;float: right;font-size: 1.2em;font-weight: bold;}#popOver {background: #eee;z-index: 1000;width: 80%;position: relative;top: 20px;border-radius: 25px;border: 2px solid #f1f1f1 !important;padding: 25px;filter: drop-shadow(2px 2px 2px #f1f1f1);display: none;margin: auto;margin-bottom: 20px;margin-top: 20px;}#closeBtn {background-color: #003366;color: white;font-weight: bold;float: right;position: relative;top: -50px;}#cidrError, #ipError {color: red;display: none;font-weight: bold;}#aboutHeader {color: #003366;font-size: 1.5em;font-weight: bold;}footer {background-color: #003366;color: white;font-weight: bold;padding-bottom: 10px;padding-top: 10px;}div.table-row:nth-child(2n) {background: #eee;}thead > tr > td {background: #003366;color: white;font-weight: bold;}tr.table-row > td.table-cell, thead > tr > td {padding-bottom: 10px;padding-left: 20px;padding-top: 10px;}@media only screen and (max-width: 700px) {tr.table-row > td.table-cell {display: block;}thead > tr > td, td.table-cell {display: block;width: 275px;}td {display: block;}.hasTooltip + .tooltiptext, span.tooltiptext {width: 50%;}}table {width: 100%;}tr.table-row:nth-child(2n) {background: #eee;}table#networkListTable {display: none;margin-bottom: 50px;}#tableError {display: none;}div#form {margin-bottom: 45px;}td {width: 300px;}table#mainResultsTable {margin-bottom: 50px !important;}.hasTooltip + .tooltiptext, span.tooltiptext {visibility: hidden;width: 250px;background-color: white;color: #003366;text-align: center;border-radius: 6px;padding-bottom: 5px;padding-left: 5px;padding-right: 5px;padding-top: 5px;position: absolute;z-index: 100;border: 2px solid #003366;margin-left: -100px;}.hasTooltip {color: black;text-decoration: none;}.hasTooltip:active + .tooltiptext {text-decoration: none;color: black;visibility: visible;font-weight: bold;}
+body, option, select#cidrSelect
+{
+    background-color: #eee;
+    font-family: "Helvetica,Arial,sans-serif";
+    font-size: 16pt;
+}
+
+#submit 
+{
+    background-color: #003366;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    height: 50px;
+    letter-spacing: 1px;
+    border: none;
+    border-radius: 10px;
+}
+
+#cidrSelect, #ipAddressInput 
+{
+    margin-bottom: 10px;
+    margin-top: 10px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    padding-top: 5px;
+    border-radius: 10px;
+}
+
+#ipAddressInput 
+{
+    border: 2px solid #003366;
+    width: 200px;
+}
+
+#cidrSelect
+{
+    width: 275px;
+}
+
+.table-row 
+{
+    display: table-row;
+}
+
+.table-cell 
+{
+    display: table-cell;
+}
+
+.bold-cell
+{
+    font-weight: bold;
+}
+
+.container
+{
+    background: white;
+    height: 100%;
+    min-height: 100%;
+}
+
+.container 
+{
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+main, header, footer 
+{
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+footer {
+    border-top: 1px solid black;
+}
+
+header 
+{
+    padding-bottom: 20px;
+    padding-top: 20px;
+}
+
+h1 
+{
+    color: #003366;
+    float: left;
+    font-size: 2.5em;
+    font-weight: bold;
+}
+
+#aboutSpan {
+    color: #003366;
+    float: right;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+#popOver 
+{
+    background: #eee;
+    z-index: 1000;
+    width: 80%;
+    position: relative;
+    top: 20px;
+    border-radius: 25px;
+    border: 2px solid #f1f1f1 !important;
+    padding: 25px;
+    filter: drop-shadow(2px 2px 2px #f1f1f1);
+    display: none;
+    margin: auto;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+#closeBtn 
+{
+    background-color: #003366;
+    color: white;
+    font-weight: bold;
+    float: right;
+    position: relative;
+    top: -50px;
+}
+
+#cidrError, #ipError 
+{
+    color: red;
+    display: none;
+    font-weight: bold;
+}
+
+#aboutHeader 
+{
+    color: #003366;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+footer 
+{
+    background-color: #003366;
+    color: white;
+    font-weight: bold;
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+
+div.table-row:nth-child(2n) 
+{
+    background: #eee;
+}
+
+thead > tr > td {
+    background: #003366;
+    color: white;
+    font-weight: bold;
+}
+
+tr.table-row > td.table-cell, thead > tr > td 
+{
+    padding-bottom: 10px;
+    padding-left: 20px;
+    padding-top: 10px;
+}
+
+table
+{
+    width: 100%;
+}
+
+tr.table-row:nth-child(2n) 
+{
+    background: #eee;
+}
+
+table#networkListTable 
+{
+    display: none;
+    margin-bottom: 50px;
+}
+
+#tableError 
+{
+    display: none;
+}
+div#form 
+{
+    margin-bottom: 45px;
+}
+
+td 
+{
+    width: 300px;
+}
+
+table#mainResultsTable 
+{
+    margin-bottom: 50px !important;
+}
+
+.hasTooltip + .tooltiptext, span.tooltiptext
+{
+    visibility: hidden;
+    width: 250px;
+    background-color: white;
+    color: #003366;
+    text-align: center;
+    border-radius: 6px;
+    padding-bottom: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 5px;
+    position: absolute;
+    z-index: 100;
+    border: 2px solid #003366;
+    margin-left: -100px;
+}
+
+.hasTooltip 
+{
+    color: black;
+    text-decoration: none;
+}
+
+.hasTooltip:active + .tooltiptext 
+{
+    text-decoration: none;
+    color: black;
+    visibility: visible;
+    font-weight: bold;
+}
+
+@media only screen and (max-width: 700px)
+{
+    
+    tr.table-row > td.table-cell {
+        display: block;
+    }
+
+    thead > tr > td, td.table-cell {
+        display: block;
+        width: 275px;
+    }
+
+    td 
+    {
+        display: block;
+    }
+
+    .hasTooltip + .tooltiptext, span.tooltiptext 
+    {
+        width: 50%;
+    }
+
+}
