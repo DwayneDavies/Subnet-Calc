@@ -1,4 +1,4 @@
-# Subnet Calc
+# Subnet Calc 0.6 (Beta One)
 This is a simple subnet calculator written in JavaScript. I created this mostly as a hobby project and as part of my developer portfolio.
 
 I chose not to use any existing code that might exist to help perform this task. It was more fun to write the code to do all this math for me, especially as it helped me verify that I have some grasp of subnetting concepts.
@@ -9,7 +9,7 @@ You will probably find that most things are done in a simple way, without anythi
 
 It is currently somewhat mobile responsive and might display fairly well on your phone. I will likely improve this in an update in the near future.
 
-It is currently in beta. Things seem to work, but there are some edge cases I have not yet accounted for or which I could handle differently. I have handled CIDR values of /31 and /32 differently. This could be improved and explained further.
+It is currently in BETA. Things seem to work, but there are some edge cases I have not yet accounted for or which I could handle differently. I have handled CIDR values of /31 and /32 differently. This could be improved and explained further.
 
 This application uses the local storage feature of modern browsers. Not all browsers support this feature. For a list of supported browsers,  [check this link](<https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage#browser_compatibility)> "Local storage browser support").
 
