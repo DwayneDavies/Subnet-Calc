@@ -9,4 +9,4 @@ You will probably find that most things are done in a simple way, without anythi
 
 It is currently somewhat mobile responsive and might display fairly well on your phone. I will likely improve this in an update in the near future.
 
-It is currently in beta. Things seem to work, but there are some edge cases I have not yet accounted for or which I could handle differently. For example, could I handle a CIDR value of /32 (subnet mask 255.255.255.255) diffently? Perhaps. 
+It is currently in beta. Things seem to work, but there are some edge cases I have not yet accounted for or which I could handle differently. For example, could I handle a CIDR value of /32 (subnet mask 255.255.255.255) diffrently? Perhaps. 
