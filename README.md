@@ -19,4 +19,5 @@ Things that probably need doing, which I have not done or finished doing:
 
 Optimizing the CSS to check for redundancies.
 The JavaScript is largely self-commenting and very modular. I have hence, felt little need to comment my code. I may add a few comments to clarify what I am doing for those that wish to follow along.
+Tweak styling, including the help text to make more mobile friendly and nicer looking.
 The local storage is not working in Opera, at least not on my machine. I need to test this on other machines. It might work fine for you.
