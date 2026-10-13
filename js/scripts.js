@@ -32,10 +32,8 @@ function validate()
 
 	if (isIPValid && isCidrValid)
 	{ 
-		ipAddress.style.borderColor = "#003366";
-		cidr.style.borderColor = "#003366";
-		ipError.style.display = "none";
-		cidrError.style.display = "none";
+		invalidateInput(ipAddress, true, ipError);
+		invalidateInput(cidr, true, cidrError);
 		localStorage.setItem('ipAddress', ipAddress.value); /* Use local storage, easier than using cookies. */
 		localStorage.setItem("cidr", cidrStr);
 		cidrStr = cidrStr.substring(0, 2); /* We use CIDR value for our math, not subnet mask. */
@@ -53,15 +51,8 @@ function validate()
 function invalidateInput(control, onOff, errorLabel)
 {
 
-	if (!onOff) {
-		control.style.border = "2px solid red";
-		errorLabel.style.display = "block";
-	}
-	else
-	{
-		control.style.border = "2px solid #003366";
-		errorLabel.style.display = "none";
-	}
+	control.setAttribute("aria-invalid", onOff ? "false" : "true");
+	errorLabel.hidden = onOff;
 
 }
 
@@ -78,6 +69,7 @@ function process(ipAddress, cidr)
 	let hosts = countHosts(hostBits);
 	let broadcast = getBroadcast(networkAddress, wildcardMask);
 
+	document.querySelector("#results").hidden = false;
 	document.querySelector("#networkAddress").innerHTML = networkAddress;
 	document.querySelector("#subnetMask").innerHTML = getSubnetMask(cidr);
 	document.querySelector("#wildcardMask").innerHTML = wildcardMask;
@@ -271,7 +263,7 @@ function printSubnetRow(address, i, octet, wildcardMask) /* Shows a row of our s
 	let text = document.createElement("tr");
 	let child, current;
 
-	document.querySelector("#networkListTable").style.display = "block";
+	document.querySelector("#networkListTable").style.display = "table";
 	parts[octet - 1] = i;
 	network = parts.join('.');
 	text.classList.add("table-row");
@@ -303,16 +295,4 @@ function printSubnetRow(address, i, octet, wildcardMask) /* Shows a row of our s
 		current.appendChild(child);
 	}
 
-}
-
-function closePopover()
-{
-	document.querySelector("#popOver").style.display = "none";
-	document.querySelector("#aboutSpan").style.display = "block";
-}
-
-function showPopover()
-{
-	document.querySelector("#popOver").style.display = "block";
-	document.querySelector("#aboutSpan").style.display = "none";
 }
