@@ -308,6 +308,15 @@ caption
     text-align: start;
 }
 
+.table-note
+{
+    color: var(--muted);
+    display: block;
+    font-size: 0.9rem;
+    font-weight: 400;
+    white-space: normal;
+}
+
 th, td
 {
     padding: 0.6rem 1rem;

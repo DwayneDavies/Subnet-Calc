@@ -94,39 +94,39 @@
                     <h2 id="resultsHeading">Results</h2>
                     <dl class="result-grid">
                         <div class="result">
-                            <dt><span class="term" tabindex="0" aria-describedby="tip-network">Network address</span><span class="tip" role="tooltip" id="tip-network">The address of the network.</span></dt>
+                            <dt><span class="term" tabindex="0" aria-describedby="tip-network">Network address</span><span class="tip" role="tooltip" id="tip-network">The first address in the subnet. Every host bit is 0.</span></dt>
                             <dd id="networkAddress"></dd>
                         </div>
                         <div class="result">
-                            <dt><span class="term" tabindex="0" aria-describedby="tip-mask">Subnet mask</span><span class="tip" role="tooltip" id="tip-mask">The subnet mask helps you find the network portion of the address.</span></dt>
+                            <dt><span class="term" tabindex="0" aria-describedby="tip-mask">Subnet mask</span><span class="tip" role="tooltip" id="tip-mask">Marks which bits of an address identify the network (1s) and which identify the host (0s).</span></dt>
                             <dd id="subnetMask"></dd>
                         </div>
                         <div class="result">
-                            <dt><span class="term" tabindex="0" aria-describedby="tip-broadcast">Broadcast address</span><span class="tip" role="tooltip" id="tip-broadcast">The broadcast address of the network.</span></dt>
+                            <dt><span class="term" tabindex="0" aria-describedby="tip-broadcast">Broadcast address</span><span class="tip" role="tooltip" id="tip-broadcast">The last address in the subnet, used to reach every host on it at once. Not used on /31 and /32 subnets.</span></dt>
                             <dd id="broadcastAddress"></dd>
                         </div>
                         <div class="result">
-                            <dt><span class="term" tabindex="0" aria-describedby="tip-wildcard">Wildcard mask</span><span class="tip" role="tooltip" id="tip-wildcard">The wildcard mask indicates which part of an IP address should be examined by a router.</span></dt>
+                            <dt><span class="term" tabindex="0" aria-describedby="tip-wildcard">Wildcard mask</span><span class="tip" role="tooltip" id="tip-wildcard">The subnet mask flipped. Router access lists use it, and a 1 means "this bit can be anything".</span></dt>
                             <dd id="wildcardMask"></dd>
                         </div>
                         <div class="result">
-                            <dt><span class="term" tabindex="0" aria-describedby="tip-networks">Number of networks</span><span class="tip" role="tooltip" id="tip-networks">How many different subnets are possible using that subnet mask.</span></dt>
+                            <dt><span class="term" tabindex="0" aria-describedby="tip-networks">Subnets in this block</span><span class="tip" role="tooltip" id="tip-networks">How many subnets of this size fit in the block that shares your address's leading octets. For example, a /20 gives 16, because 16 of them fit in each /16.</span></dt>
                             <dd id="numNetworks"></dd>
                         </div>
                         <div class="result">
-                            <dt><span class="term" tabindex="0" aria-describedby="tip-addresses">Number of addresses</span><span class="tip" role="tooltip" id="tip-addresses">How many addresses exist on each subnet.</span></dt>
+                            <dt><span class="term" tabindex="0" aria-describedby="tip-addresses">Addresses per subnet</span><span class="tip" role="tooltip" id="tip-addresses">Every address in the subnet, including the network and broadcast addresses. This is 2 to the power of the host bits.</span></dt>
                             <dd id="numAddresses"></dd>
                         </div>
                         <div class="result">
-                            <dt><span class="term" tabindex="0" aria-describedby="tip-usable">Usable hosts</span><span class="tip" role="tooltip" id="tip-usable">How many usable hosts exist on each subnet. Equals number of addresses - 2.</span></dt>
+                            <dt><span class="term" tabindex="0" aria-describedby="tip-usable">Usable hosts</span><span class="tip" role="tooltip" id="tip-usable">The addresses you can give to devices: addresses minus 2. A /31 has 2 usable hosts and a /32 has 1.</span></dt>
                             <dd id="numUsuableHosts"></dd>
                         </div>
                         <div class="result">
-                            <dt><span class="term" tabindex="0" aria-describedby="tip-first">First host</span><span class="tip" role="tooltip" id="tip-first">The address of the first usable host.</span></dt>
+                            <dt><span class="term" tabindex="0" aria-describedby="tip-first">First host</span><span class="tip" role="tooltip" id="tip-first">The lowest address you can assign to a device.</span></dt>
                             <dd id="firstHost"></dd>
                         </div>
                         <div class="result">
-                            <dt><span class="term" tabindex="0" aria-describedby="tip-last">Last host</span><span class="tip" role="tooltip" id="tip-last">The address of the last usable host.</span></dt>
+                            <dt><span class="term" tabindex="0" aria-describedby="tip-last">Last host</span><span class="tip" role="tooltip" id="tip-last">The highest address you can assign to a device.</span></dt>
                             <dd id="lastHost"></dd>
                         </div>
                     </dl>
@@ -134,7 +134,10 @@
 
                 <div class="table-wrap">
                     <table id="networkListTable">
-                        <caption>Subnets</caption>
+                        <caption>
+                            Subnets in this block
+                            <span class="table-note">Showing the subnets that share the first octets of your address (for example 192.168.x.0 for a /20).</span>
+                        </caption>
                         <thead>
                             <tr>
                                 <th scope="col">Network address</th>
